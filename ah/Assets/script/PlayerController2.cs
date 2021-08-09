@@ -76,6 +76,7 @@ public class PlayerController2 : MonoBehaviour
             {
                 isJumping = false;
             }
+
         }
  
         if (Input.GetButtonUp("Jump"))
