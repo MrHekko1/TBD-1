@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-
+    
+    public Animator anim;
+    
     public GameObject sword;
     // Start is called before the first frame update
     void Start()
@@ -17,20 +19,19 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            Invoke("StartAttack", 0.1f);                       
+            StartAttack();               
         }
     }
 
     void StartAttack()
     {
-        sword.SetActive(true);
+        anim.Play("swordTest");
 
-        Invoke("StopAttack", 1.5f);
-        
+        //StopAttack();
     }
 
-    void StopAttack()
-    {
-        sword.SetActive(false);
-    }
+    //void StopAttack()
+    //{
+    //    anim.Play("");
+    //}
 }
